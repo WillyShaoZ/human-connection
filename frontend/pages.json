@@ -1,0 +1,31 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "Card Game",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/room/room",
+      "style": {
+        "navigationBarTitleText": "Game Room",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/questions/questions",
+      "style": {
+        "navigationBarTitleText": "My Questions",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "Card Game",
+    "navigationBarBackgroundColor": "#667eea",
+    "backgroundColor": "#667eea"
+  }
+}
