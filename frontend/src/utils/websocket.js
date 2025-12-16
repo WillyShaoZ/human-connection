@@ -1,6 +1,5 @@
 // WebSocket manager for real-time game communication
-// Change to your IP for network play
-const WS_BASE_URL = 'ws://192.168.4.26:8000'
+const WS_BASE_URL = 'wss://human-connection.onrender.com'
 
 class GameWebSocket {
   constructor() {

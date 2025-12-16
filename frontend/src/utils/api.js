@@ -1,5 +1,5 @@
-// API base URL - change to your IP for network play
-const BASE_URL = 'http://192.168.4.26:8000'
+// API base URL
+const BASE_URL = 'https://human-connection.onrender.com'
 
 // HTTP request helper
 const request = (url, method = 'GET', data = null) => {
