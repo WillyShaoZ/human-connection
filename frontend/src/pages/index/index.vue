@@ -70,18 +70,13 @@
         <!-- Join Room Panel -->
         <view v-if="activeTab === 'join'" class="section">
           <text class="section-label">🔢 Room Code</text>
-          <view class="code-input-row">
-            <input
-              v-model="roomCodeInput"
-              class="input input-code"
-              placeholder="XXXXXX"
-              maxlength="6"
-              @input="roomCodeInput = roomCodeInput.toUpperCase()"
-            />
-            <view class="paste-btn" @click="pasteCode">
-              <text class="paste-icon">📋</text>
-            </view>
-          </view>
+          <input
+            v-model="roomCodeInput"
+            class="input input-code"
+            placeholder="XXXXXX"
+            maxlength="6"
+            @input="roomCodeInput = roomCodeInput.toUpperCase()"
+          />
         </view>
 
         <!-- Quick Actions -->
@@ -135,18 +130,6 @@ onMounted(() => {
     nickname.value = gameStore.playerNickname
   }
 })
-
-const pasteCode = async () => {
-  try {
-    const res = await uni.getClipboardData()
-    if (res.data && res.data.length === 6) {
-      roomCodeInput.value = res.data.toUpperCase()
-      uni.showToast({ title: 'Pasted!', icon: 'success' })
-    }
-  } catch (e) {
-    console.log('Paste failed')
-  }
-}
 
 const handleCreateRoom = async () => {
   if (!nickname.value.trim()) {
@@ -356,26 +339,6 @@ const goToQuestions = () => {
   font-weight: 600;
   letter-spacing: 8rpx;
   text-transform: uppercase;
-  flex: 1;
-}
-
-.code-input-row {
-  display: flex;
-  gap: 12rpx;
-}
-
-.paste-btn {
-  width: 88rpx;
-  height: 88rpx;
-  background: #f9f9f9;
-  border-radius: 16rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.paste-icon {
-  font-size: 32rpx;
 }
 
 /* Tabs */
